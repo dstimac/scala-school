@@ -1,13 +1,16 @@
 package paket.paket
 
-import paket.paket.ChecksumAccumulator.calculate
+import paket.paket.FileMatcher
 
 object Summer {
 
   def main(args: Array[String]) {
 
-    for(arg <- args)
-      println(arg + ": " + calculate(arg))
+    //for(file <- FileMatcher.filesContaining("it")) println(file)
+
+    for(file <- FileMatcher.filesMatchingScala4()) println(file)
 
   }
+
+
 }
