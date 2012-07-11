@@ -1,15 +1,17 @@
 package paket.paket
 
-import paket.paket.FileMatcher
+import paket.paket.WithPrintWriter.withPringWriter
+import java.io.File
 
 object Summer {
 
   def main(args: Array[String]) {
 
-    //for(file <- FileMatcher.filesContaining("it")) println(file)
+    val file = new File("aaa.aaa")
 
-    for(file <- FileMatcher.filesMatchingScala4()) println(file)
-
+    withPringWriter(file) {
+      writer => writer.println("Nesto tek toliko da pise2")
+    }
   }
 
 
